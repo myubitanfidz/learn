@@ -22,12 +22,22 @@ Class Mahasiswa {
         echo "IPK saya adalah {$this->ipk}.\n";
     }
 
+    public function cumlaude() {
+        if ($this->ipk >= 3.5) {
+            echo "Saya lulus dengan predikat cumlaude.\n"; 
+        } else {
+            echo "Saya tidak lulus dengan predikat cumlaude.\n";
+        }
+    }
+
 }
 
 // Membuat objek dari class Mahasiswa
 $nabil = new Mahasiswa("Nabil", "Teknik Informatika", 3.8, 5);
 $hisyam = new Mahasiswa("Hisyam", "Sistem Informasi", 3.5, 4);
 
+
+$nabil->cumlaude();
 $nabil->perkenalan();
 
 ?>
