@@ -7,18 +7,17 @@ Class Mahasiswa {
     public $ipk;
     public $semester;
     // Method itu kayak aksi atau fungsi yang dimiliki oleh sebuah objek
-    public function perkenalan() {
-        echo "Halo, nama saya " . $this->nama . ", saya mengambil jurusan " . $this->jurusan . " dengan IPK " . $this->ipk . " pada semester " . $this->semester . ".";
+    public function __construct($nama, $jurusan, $ipk, $semester) {
+        $this->nama = $nama;
+        $this->jurusan = $jurusan;
+        $this->ipk = $ipk;
+        $this->semester = $semester;
     }
 
 }
 
 // Membuat objek dari class Mahasiswa
-$nabil = new Mahasiswa();
-$nabil->nama = "Nabil";
-$nabil->jurusan = "Teknik Informatika";
-$nabil->ipk = 3.8;
-$nabil->semester = 5;
+$nabil = new Mahasiswa("Nabil", "Teknik Informatika", 3.8, 5);
 
 $nabil->perkenalan();
 
