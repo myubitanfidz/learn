@@ -24,9 +24,9 @@ Class Mahasiswa {
 
     public function cumlaude() {
         if ($this->ipk >= 3.5) {
-            echo "Saya lulus dengan predikat cumlaude.\n"; 
+            echo "Saya lulus dengan predikat cumlaude. \n"; 
         } else {
-            echo "Saya tidak lulus dengan predikat cumlaude.\n";
+            echo "Saya tidak lulus dengan predikat cumlaude. \n";
         }
     }
 
@@ -35,9 +35,18 @@ Class Mahasiswa {
 // Membuat objek dari class Mahasiswa
 $nabil = new Mahasiswa("Nabil", "Teknik Informatika", 3.8, 5);
 $hisyam = new Mahasiswa("Hisyam", "Sistem Informasi", 3.5, 4);
-
+$brian = new Mahasiswa("Brian", "Teknik Elektro", 3.2, 6);
 
 $nabil->cumlaude();
 $nabil->perkenalan();
+$nabil->IPK();
+
+$hisyam->cumlaude();
+$hisyam->perkenalan();
+$hisyam->IPK();
+
+$brian->cumlaude();
+$brian->perkenalan();
+$brian->IPK();
 
 ?>
