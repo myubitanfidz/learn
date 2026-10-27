@@ -1,9 +1,10 @@
-#include <iostream>
+#include <iostream> // include library input output
 
-using namespace std;
+using namespace std; // use standard namespace
 
 
-int main(){
-    cout << "Halo semuanya";
-    return 0;
+int main(){ // main function
+    cout << "Halo semuanya"; // print "Halo semuanya" to the console
+    return 0; // return 0 to indicate successful execution of the program
 }
+
