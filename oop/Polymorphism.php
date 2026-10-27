@@ -19,7 +19,6 @@ class orang{
     }
 
     public function getNama(){
-        echo $this->nama;
         return $this->nama;
     }
 
@@ -113,7 +112,7 @@ echo "<br>";
 $esempeh1 = new esempeh("Andi", 20, "Laki-laki", 170, 60, "Diamond");
 $esempeh1->ketawa();
 $esempeh1->tunjukkanRankMobileLegends();
-$esempeh1->getNama();
+echo $esempeh1->getNama();
 
 echo "<br>";
 
@@ -134,4 +133,49 @@ $orangArray = [$a, $b, $c];
 foreach ($orangArray as $orang) {
     $orang->perkenalanDiri();
     $orang->marah();
+}
+
+
+abstract class Hewan {
+
+    protected $nama;
+
+    public function __construct($nama){
+        $this->nama = $nama;
+    }
+
+    public function makan(){
+        echo "{$this->nama} sedang makan.\n";
+    }
+
+    abstract public function suara();
+}
+
+
+class kucing extends Hewan {
+
+    public function suara(){
+        echo "{$this->nama} berkata: Meong!\n";
+    }
+}
+
+
+class anjing extends Hewan {
+
+    public function suara(){
+        echo "{$this->nama} berkata: Guk guk!\n";
+    }
+}
+
+
+echo "<br>";
+
+$kucing1 = new kucing("Kitty");
+$anjing1 = new anjing("Buddy");
+
+$hewanArray = [$kucing1, $anjing1];
+
+foreach ($hewanArray as $hewan) {
+    $hewan->makan();
+    $hewan->suara();
 }
