@@ -17,6 +17,7 @@ abstract class orang{
         $this->kelamin = $kelamin;
         $this->tinggi = $tinggi;
         $this->berat = $berat;
+        
     }
 
     public function getNama(){
