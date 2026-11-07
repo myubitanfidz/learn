@@ -9,6 +9,7 @@ abstract class Hewan {
     private $umur;        // private   : hanya class ini
     protected $nama;      // protected : class ini + turunannya
 
+    
     // CONSTRUCTOR: jalan otomatis saat "new", mengisi data sejak lahir
     public function __construct($nama, $umur) {
         $this->nama = $nama;
